@@ -1,0 +1,6 @@
+
+/* Absolutely required so the maps can be shown */
+agm-map {
+    height: 100% !important;
+    width: 100% !important;
+}

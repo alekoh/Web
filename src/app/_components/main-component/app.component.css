@@ -1,0 +1,81 @@
+/* This is the div that holds both the navigation and central element*/
+.main {
+    height: 100%;
+}
+
+/* Navigation element */
+.navigation {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Navigation tuning */
+.navigation > md-toolbar {
+    padding-right: 5%;
+    padding-left: 5%;
+}
+.actionButtons > button {
+    color: #673ab7!important;
+}
+.space-between {
+    flex: 1 1 auto;
+}
+.icon {
+    padding: 0 14px;
+}
+
+/* This class holds the search form, map and cities */
+.central {
+    flex: 1 0 auto;
+    display: block;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 91%;
+}
+
+/* This class holds the search form and the map */
+.top {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    height: 80%;
+}
+
+/* Search form */
+.search {
+    flex: 1 55%;
+    display: flex;
+    background: #673ab7; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#673ab7, #ffd740); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#673ab7, #ffd740); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#673ab7, #ffd740); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#673ab7, #ffd740); /* Standard syntax */
+}
+
+
+/* Map element */
+.map {
+    flex: 1 45%;
+    position: relative;
+    overflow: hidden;
+}
+
+/* This buddy holds the cities */
+.bottom {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    height: 20%;
+}
+
+/* Individual city */
+.city {
+    width: 100%;
+    background-image: url("../../../assets/skopje.png");
+    border-left: groove;
+    background-size: cover;
+}
+
+.city:hover{
+    opacity: 0.7;
+}

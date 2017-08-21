@@ -1,13 +1,18 @@
 /* This is the div that holds both the navigation and central element*/
 .main {
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
 }
 
 /* Navigation element */
 .navigation {
     display: flex;
     justify-content: space-between;
-}
+    height: 8%;
+    position: static;
+  }
 
 /* Navigation tuning */
 .navigation > md-toolbar {
@@ -30,7 +35,7 @@
     display: block;
     flex-direction: column;
     flex-wrap: wrap;
-    height: 91%;
+    height: 92%;
 }
 
 /* This class holds the search form and the map */
@@ -43,8 +48,14 @@
 
 /* Search form */
 .search {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  /* width: 35%; */
     flex: 1 55%;
     display: flex;
+    margin: auto;
     background: #673ab7; /* For browsers that do not support gradients */
     background: -webkit-linear-gradient(#673ab7, #ffd740); /* For Safari 5.1 to 6.0 */
     background: -o-linear-gradient(#673ab7, #ffd740); /* For Opera 11.1 to 12.0 */
@@ -55,6 +66,7 @@
 
 /* Map element */
 .map {
+  width: 45%;
     flex: 1 45%;
     position: relative;
     overflow: hidden;
@@ -66,14 +78,35 @@
     flex-direction: row;
     flex-wrap: nowrap;
     height: 20%;
+    flex: 0 20%;
 }
 
 /* Individual city */
 .city {
     width: 100%;
-    background-image: url("../../../assets/skopje.png");
+    height: 100%;
     border-left: groove;
     background-size: cover;
+}
+
+.city.skopje {
+  background-image: url("../../../assets/skopje.png");
+}
+
+.city.bitola {
+  background-image: url("../../../assets/bitola.png");
+}
+
+.city.veles {
+  background-image: url("../../../assets/veles.png");
+}
+
+.city.ohrid {
+  background-image: url("../../../assets/ohrid.png");
+}
+
+.city.stip {
+  background-image: url("../../../assets/stip.png");
 }
 
 .city:hover{

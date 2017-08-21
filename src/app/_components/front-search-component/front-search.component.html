@@ -1,32 +1,25 @@
-
 <div class="container-search">
 
-    <div class="welcome-text">
-        <h1>
-            Find your next job in Skopje
-        </h1>
-        <h2>As a software engineer</h2>
-    </div>
+  <div class="welcome-text">
+    <h1>
+      Find your next job in Skopje
+    </h1>
+    <h2>As a software engineer</h2>
+  </div>
 
-    <div class="form">
-        <form>
-            <input mdInput type="text" id="location" name="location" placeholder="Location..">
-            <input type="text" id="jobType" name="jobType" placeholder="Job type..">
+  <div class="form">
+    <form class="form" #form="ngForm" (ngSubmit)="search()">
+      <input mdInput type="text" id="location" name="location" placeholder="Location.." [mdAutocomplete]="auto" [formControl]="cityCtrl">
+      <md-autocomplete #auto="mdAutocomplete">
+        <md-option *ngFor="let city of filteredCities | async" [value]="city">
+          {{ city }}
+        </md-option>
+      </md-autocomplete>
 
-            <button md-raised-button color="primary">Search</button>
-        </form>
-    </div>
+      <input type="text" id="jobType" name="jobType" placeholder="Job type.." [(ngModel)]="model.jobType" #jobType="ngModel">
 
+      <button class="btn-search" md-raised-button color="primary" type="submit">Search</button>
+    </form>
+  </div>
 
 </div>
-
-
-<!--
-<md-input-container class="inputForm">
-            <input mdInput  placeholder="Location">
-        </md-input-container>
-
-        <md-input-container class="inputForm">
-            <input mdInput placeholder="Type of job">
-        </md-input-container>
--->

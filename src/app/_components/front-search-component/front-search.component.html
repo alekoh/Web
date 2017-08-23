@@ -9,11 +9,11 @@
     </div>
 
     <div class="form">
-        <form>
-            <input mdInput type="text" id="location" name="location" placeholder="Location..">
-            <input type="text" id="jobType" name="jobType" placeholder="Job type..">
+        <form #form="ngForm" (ngSubmit)="submitSearchQuery(form)" novalidate>
+            <input mdInput type="text" id="location" name="location" placeholder="Location.." ngModel>
+            <input type="text" id="jobType" name="jobType" placeholder="Job type.." ngModel>
 
-            <button md-raised-button color="primary">Search</button>
+            <button type="submit" md-raised-button color="primary">Search</button>
         </form>
     </div>
 

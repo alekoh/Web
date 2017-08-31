@@ -5,6 +5,8 @@ html, body {height: 100%;}
 
 #app {height: 100%;}
 
-app-root {
-    min-height: 100% !important;
+body {
+    min-width: 360px;
+    min-height: 480px;
 }
+
